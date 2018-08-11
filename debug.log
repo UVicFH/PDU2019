@@ -1,0 +1,5 @@
+[0810/164556:ERROR:tcp_socket_win.cc(335)] bind() returned an error: Only one usage of each socket address (protocol/network address/port) is normally permitted. (0x2740)
+[0810/164556:ERROR:devtools_http_handler.cc(229)] Cannot start http server for devtools. Stop devtools.
+[0810/164557:ERROR:cache_util_win.cc(20)] Unable to move the cache: 5
+[0810/164557:ERROR:cache_util.cc(134)] Unable to move cache folder C:\ProgramData\Altium\Altium Designer {47FB84C7-C641-49EC-97BF-7B9FAE37AFA9}\BrowserCache to C:\ProgramData\Altium\Altium Designer {47FB84C7-C641-49EC-97BF-7B9FAE37AFA9}\old_BrowserCache_000
+[0810/164557:ERROR:cache_creator.cc(129)] Unable to create cache
