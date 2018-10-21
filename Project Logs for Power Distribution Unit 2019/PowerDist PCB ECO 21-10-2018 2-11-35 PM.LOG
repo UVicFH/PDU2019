@@ -1,0 +1,44 @@
+Added Component: Designator=P4(MX150 20 PIN)
+Added Component: Designator=P6(MX150 20 PIN)
+Added Pin To Net: NetName=RBRB Pin=P4-1
+Added Pin To Net: NetName=GND Pin=P4-2
+Added Pin To Net: NetName=RBRB Pin=P4-3
+Added Pin To Net: NetName=GND Pin=P4-4
+Added Pin To Net: NetName=NetP4_5 Pin=P4-5
+Added Pin To Net: NetName=NetP4_6 Pin=P4-6
+Added Pin To Net: NetName=NetP4_5 Pin=P4-7
+Added Pin To Net: NetName=NetP4_6 Pin=P4-8
+Added Pin To Net: NetName=NetP4_5 Pin=P4-9
+Added Pin To Net: NetName=Net5VSpr1_2 Pin=P4-10
+Added Pin To Net: NetName=NetP4_5 Pin=P4-11
+Added Pin To Net: NetName=Net5VSpr2_2 Pin=P4-12
+Added Pin To Net: NetName=NetP4_13 Pin=P4-13
+Added Pin To Net: NetName=GND Pin=P4-14
+Added Pin To Net: NetName=NetMABX REF_2 Pin=P4-15
+Added Pin To Net: NetName=NetP4_16 Pin=P4-16
+Added Pin To Net: NetName=NetACCL1_2 Pin=P4-17
+Added Pin To Net: NetName=CBRB Pin=P4-18
+Added Pin To Net: NetName=NetACCL1_2 Pin=P4-19
+Added Pin To Net: NetName=CBRB Pin=P4-20
+Added Pin To Net: NetName=NetK1_3 Pin=P6-1
+Added Pin To Net: NetName=NetP6_2 Pin=P6-2
+Added Pin To Net: NetName=NetD19_2 Pin=P6-3
+Added Pin To Net: NetName=NetD14_2 Pin=P6-4
+Added Pin To Net: NetName=NetD13_2 Pin=P6-5
+Added Pin To Net: NetName=NetC11_1 Pin=P6-6
+Added Pin To Net: NetName=NetC14_1 Pin=P6-7
+Added Pin To Net: NetName=NetC12_1 Pin=P6-8
+Added Pin To Net: NetName=Net12VSpr2_1 Pin=P6-9
+Added Pin To Net: NetName=NetMS_2 Pin=P6-10
+Added Pin To Net: NetName=NetP6_11 Pin=P6-11
+Added Pin To Net: NetName=NetInj_2 Pin=P6-12
+Added Pin To Net: NetName=NetMtr Cntrl_2 Pin=P6-13
+Added Pin To Net: NetName=NetETBDrv_2 Pin=P6-14
+Added Pin To Net: NetName=RBRB Pin=P6-15
+Added Pin To Net: NetName=CBRB Pin=P6-16
+Added Pin To Net: NetName=RBRB Pin=P6-17
+Added Pin To Net: NetName=CBRB Pin=P6-18
+Added Pin To Net: NetName=NetK1_5 Pin=P6-19
+Added Pin To Net: NetName=NetC13_1 Pin=P6-20
+Added Member To Class: ClassName=Fusing Member=Component P4 MX150-20
+Added Member To Class: ClassName=Fusing Member=Component P6 MX150-20
