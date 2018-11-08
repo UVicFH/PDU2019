@@ -1,0 +1,12 @@
+Change Component Designator: OldDesignator=5V1 NewDesignator=5VSpr1
+Change Component Designator: OldDesignator=5V2 NewDesignator=5VSpr2
+Change Component Designator: OldDesignator=12V1 NewDesignator=12VSpr1
+Change Component Designator: OldDesignator=12V2 NewDesignator=12VSpr2
+Change Component Designator: OldDesignator=Brk NewDesignator=BRKLTVIN
+Change Component Designator: OldDesignator=Cntr NewDesignator=Cntrllr
+Change Component Designator: OldDesignator=ETBD NewDesignator=ETBDrv
+Change Component Designator: OldDesignator=FP NewDesignator=FP Rly
+Change Component Designator: OldDesignator=MtrC NewDesignator=Mtr Cntrl
+Change Component Designator: OldDesignator=REF NewDesignator=MABX REF
+Added Pin To Net: NetName=RBRB Pin=P4-3
+Added Pin To Net: NetName=RBRB Pin=P4-13
