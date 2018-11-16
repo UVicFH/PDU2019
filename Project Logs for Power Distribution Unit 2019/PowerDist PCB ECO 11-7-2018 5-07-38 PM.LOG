@@ -1,0 +1,32 @@
+Removed Pin From Net: NetName=GND Pin=P4-2
+Removed Pin From Net: NetName=GND Pin=P4-4
+Removed Pin From Net: NetName=NetP4_5 Pin=P4-7
+Removed Pin From Net: NetName=NetP4_5 Pin=P4-9
+Removed Pin From Net: NetName=Net5VSpr1_2 Pin=P4-10
+Removed Pin From Net: NetName=NetP4_5 Pin=P4-11
+Removed Pin From Net: NetName=NetMABX REF_2 Pin=P4-15
+Removed Pin From Net: NetName=NetP4_16 Pin=P4-16
+Removed Pin From Net: NetName=NetACCL_2 Pin=P4-17
+Removed Pin From Net: NetName=CBRB Pin=P4-18
+Removed Pin From Net: NetName=NetACCL_2 Pin=P4-19
+Removed Pin From Net: NetName=CBRB Pin=P4-20
+Removed Pin From Net: NetName=NetBPT_2 Pin=P6-11
+Removed Pin From Net: NetName=NetP4_5 Pin=WSPD-2
+Added Pin To Net: NetName=Net5VSpr1_2 Pin=P4-2
+Added Pin To Net: NetName=NetBPT_2 Pin=P4-4
+Added Pin To Net: NetName=NetP4_5 Pin=P4-6
+Added Pin To Net: NetName=NetACCL_2 Pin=P4-10
+Added Pin To Net: NetName=NetMABX REF_2 Pin=P4-11
+Added Pin To Net: NetName=CBRB Pin=P4-15
+Added Pin To Net: NetName=CBRB Pin=P4-16
+Added Pin To Net: NetName=GND Pin=P4-17
+Added Pin To Net: NetName=NetACCL_2 Pin=P4-20
+Added Pin To Net: NetName=NetP4_16 Pin=P6-11
+Added Pin To Net: NetName=NetP4_5 Pin=Susp-2
+Change Net Name : Old Net Name=NetP4_16 New Net Name=NetP6_11
+Added Pin To Net: NetName=NetP4_8 Pin=P4-8
+Added Pin To Net: NetName=NetP4_8 Pin=P4-9
+Added Pin To Net: NetName=NetP4_8 Pin=P4-18
+Added Pin To Net: NetName=NetP4_8 Pin=P4-19
+Added Pin To Net: NetName=NetP4_8 Pin=WSPD-2
+Added Net: Name=NetP4_8
