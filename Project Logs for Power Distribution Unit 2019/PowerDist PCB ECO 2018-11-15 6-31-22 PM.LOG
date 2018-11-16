@@ -1,0 +1,5 @@
+Added Pin To Net: NetName=CBRB Pin=P4-10
+Added Pin To Net: NetName=NetACCL_2 Pin=P4-15
+Added Pin To Net: NetName=NetACCL_2 Pin=P4-16
+Added Pin To Net: NetName=CBRB Pin=P4-20
+Change Net Name : Old Net Name=+5V New Net Name=5VOut
