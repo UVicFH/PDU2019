@@ -1,0 +1,9 @@
+Removed Pin From Net: NetName=CBRB Pin=P6-17
+Removed Pin From Net: NetName=CBRB Pin=P6-18
+Added Pin To Net: NetName=CBRB Pin=P5-3
+Added Pin To Net: NetName=CBRB Pin=P5-3
+Added Pin To Net: NetName=CBRBIN Pin=P5-4
+Added Pin To Net: NetName=CBRBIN Pin=P5-4
+Added Pin To Net: NetName=CBRBIN Pin=P6-17
+Added Pin To Net: NetName=CBRBIN Pin=P6-18
+Added Net: Name=CBRBIN
