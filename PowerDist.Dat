@@ -1,0 +1,38 @@
+﻿Field=#~Integer~#~50|Field=Comment~String~Comment~100|Field=Description~String~Description~100|Field=Designator~String~Designator~100|Field=Footprint~String~Footprint~100|Field=LibRef~String~LibRef~100|Field=Quantity~Integer~Quantity~100|Field=Supplier Part Number~String~Supplier Part Number~100|ReportField=Currency~<none>|ReportField=ProductionQuantity~1|ReportField=ProjectFileName~Power Distribution Unit 2019.PrjPCB|ReportField=ProjectFullPath~C:\Users\Tanner\Documents\GitHub\PDU2019\Power Distribution Unit 2019.PrjPCB|ReportField=Title~Bill of Materials For PCB Document [PowerDist.PcbDoc]|ReportField=ReportTime~2:39:11 PM|ReportField=ReportDate~11/25/2018|ReportField=ReportDateTime~11/25/2018 2:39:11 PM|ReportField=OutputName~Bill of Materials|ReportField=OutputType~BOM_PartType|ReportField=GeneratorName~BOM|ReportField=GeneratorDescription~Bill of Materials|ReportField=VariantName~None|ReportField=TotalQuantity~124|ReportField=TotalActualPrice~0|ReportField=TotalTargetPrice~0|ReportField=VersionControl_RevNumber~|ReportField=VersionControl_ProjFolderRevNumber~1c2a7a5be4587d1d12abc3488be80ad7f2a6bec9|ReportField=DataSourceFileName~PowerDist.PcbDoc|ReportField=DataSourceFullPath~C:\Users\Tanner\Documents\GitHub\PDU2019\PowerDist.PcbDoc|ReportField=PCBConfigurationName~Sources|ReportField=Item~|ReportField=ItemRevision~|ReportField=ItemAndRevision~|ReportField=ItemRevisionBase~|ReportField=ItemRevisionLevel1~|ReportField=ItemRevisionLevel2~|ReportField=ItemRevisionLevel1AndBase~|ReportField=ItemRevisionLevel2AndLevel1~
+1|1A|Fuse|5V1, 5V2, 12V1, 12V2, Brk, Cntr, ETBD, FP, Inj, MS, MtrC, Shft, Strt|FUSC4632X85N|Fuse 2|13|507-1878-1-ND
+2|500mA|Fuse|Accl, BPT, ETB, REF, Susp, WSPD|FUSC4632X85N|Fuse 2|6|507-1876-1-ND
+3|4.7uF|Capacitor (Semiconductor SIM Model)|C1, C5, C9|CAPC3216X170N|Cap Semi|3|1276-1055-1-ND
+4|1uF|Capacitor (Semiconductor SIM Model)|C2, C10|CAPC3216X170N|Cap Semi|2|1276-3086-1-ND
+5|100nF|Capacitor (Semiconductor SIM Model)|C3, C6, C7, C8|CAPC3216X170N|Cap Semi|4|1276-1151-1-ND
+6|Cap2|Capacitor. Ceramic 10uF 50V rating recommended, place close to pin|C4, C11, C12, C13, C14, C15, C16|CAPC3216X170N|Cap2|7|
+7|Red|Typical RED, GREEN, YELLOW, AMBER GaAs LED|D1, D10, D11, D15, D16, D17, D22, D23|LEDC3216X120NRED|LED2, LED2_2|8|732-4992-1-ND
+8|Green|Typical RED, GREEN, YELLOW, AMBER GaAs LED|D2|LEDC3216X120NGRN|LED2|1|732-4993-1-ND
+9|Yellow|Typical RED, GREEN, YELLOW, AMBER GaAs LED|D3, D5, D6, D7|LEDC3216X120NYEL|LED2|4|732-4994-1-ND
+10|Diode|Default Diode, Switching diode|D4, D20, D21|DO-220AA|Diode|3|SS1P3L-M3/84AGICT-ND, [NoParam]
+11|Diode|Default Diode|D8, D9, D12, D13, D14|SOD123|Diode|5|
+12|Diode|Default Diode|D19|SMC|Diode|1|
+13|Fuse 2|Fuse|F1|1812|Fuse 2|1|‎MF-MSMF050-2CT-ND
+14|USB micro B|CONN SM TH USB MICRO MODIFIED FOR DRILL|J1|1050170001|1050170001|1|609-4618-1-ND
+15|PB134012|Miniature Power PCB Relay PB, 1 Form A Contact, 12 V, 10 A, 360 mW, Standard Version, -40 to 85 degC, 5-Pin 15 x 15 x 20 mm THD, RoHS, Tube|K1|TECO-PB134-5_V|PB134012|1|
+16|ICSP|Header, 3-Pin, Dual row|P1|Pin Header 2x3 TH Pitch 2.54mm|Header 3X2A|1|
+17|Serial|Header, 2-Pin|P2|Pin Header 1x2 TH Pitch 2.54mm|Header 2|1|
+18|CANOUT|Header, 2-Pin|P3|Pin Header 1x2 TH Pitch 2.54mm|Header 2|1|
+19|MX150-20|Header, 10-Pin, Dual row|P4, P6|MX150 20 PIN|Header 10X2|2|
+20|43160-3102|4pin blade header molex|P5|431603102|0431600104|1|
+21|2A|Fuse|Pi|FUSC4632X85N|Fuse 2|1|507-1881-2-ND
+22|MOSFET-N|N-Channel MOSFET|Q1, Q2, Q5, Q6, Q7, Q11, Q12|SOT23-3|MOSFET-N|7|
+23|MOSFET-P|P-Channel MOSFET|Q3, Q4, Q8, Q9, Q10|SOT23-3|MOSFET-P|5|
+24|MOSFET-P|P-Channel MOSFET|Q13|TO-220AB|MOSFET-P|1|
+25|10K|Resistor|R1, R9|RESC3216X60N|Res1|2|RNCP1206FTD10K0CT-ND
+26|1K|Resistor|R2, R3, R4, R7, R10, R11, R12, R15, R16, R24|RESC3216X60N|Res1|10|RMCF1206FT1K00CT-ND, RNCP1206FTD1K00CT-ND
+27|499|Resistor|R5|RESC3216X60N|Res1|1|RMCF1206FT499RCT-ND
+28|16.9K|Resistor|R6|RESC3216X60N|Res1|1|RMCF1206FT16K9CT-ND
+29|120|Resistor|R8|RESC3216X60N|Res1|1|
+30|1206|Resistor|R13, R14, R17, R18, R19, R20, R21, R22, R23, R27, R28, R29, R30, R31, R32, R35, R36, R37, R38, R39|RESC3216X60N|Res1|20|
+31|SW-PB|Switch|S1|SMDswitch_1206|SW-PB|1|CKN10779CT-ND
+32|ATmega328P-AU|8-bit AVR Microcontroller, 32KB Flash, 1KB EEPROM, 2KB SRAM, 32-pin TQFP, Industrial Grade (-40°C to 85°C)|U1|QFP80P900X900X120-32N|ATmega328P-AU|1|ATMEGA328P-AU-ND
+33|LM1085IT-5.0/NOPB|3A Low Dropout Positive Regulators, 3-pin TO-220, Pb-Free|U2, U6|T03B|LM1085IT-5.0/NOPB|2|
+34|MCP2551-E/SN|SOIC|U3|SOIC127P600X175-8N|MCP2551-E/SN|1|MCP2551T-E/SNCT-ND
+35|FT232RL-Reel|USB UART Asynchronous Serial Data Transfer Chip, SSOP-28, Tape and Reel|U4|SOP65P780X200-28N|FT232RL-Reel|1|768-1007-1-ND
+36|MCP2515-E/ST|SOIC|U5|SOIC127P1030X265-18N|MCP2515-E/ST|1|MCP2515T-I/SOCT-ND
+37|CSTCE16M0V53-R0||Y1, Y2|CSTCE_G|CSTCE16M0V53-R0|2|490-17948-1-ND
