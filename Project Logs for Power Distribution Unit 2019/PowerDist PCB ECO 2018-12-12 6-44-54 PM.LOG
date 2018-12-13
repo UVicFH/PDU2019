@@ -1,0 +1,9 @@
+Removed Pin From Net: NetName=NetC14_1 Pin=P6-7
+Added Pin To Net: NetName=NetC14_1 Pin=P4-11
+Added Pin To Net: NetName=NetC20_2 Pin=P6-16
+Added Pin To Net: NetName=NetP6_7 Pin=P6-7
+Added Net: Name=NetP6_7
+Added Pin To Net: NetName=NetP6_10 Pin=P6-10
+Added Pin To Net: NetName=NetP6_10 Pin=P6-20
+Added Net: Name=NetP6_10
+Added Member To Class: ClassName=Candunio Member=Component P1 ICSP
