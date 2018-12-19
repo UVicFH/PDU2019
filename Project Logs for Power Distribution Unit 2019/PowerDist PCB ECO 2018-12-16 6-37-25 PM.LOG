@@ -1,0 +1,14 @@
+Change Component Comment : Designator=R17 Old Comment=1206 New Comment=511
+Change Component Comment : Designator=R19 Old Comment=1206 New Comment=511
+Change Component Comment : Designator=R27 Old Comment=1206 New Comment=511
+Change Component Comment : Designator=R29 Old Comment=1206 New Comment=511
+Change Component Comment : Designator=R31 Old Comment=1206 New Comment=511
+Change Component Comment : Designator=R38 Old Comment=1206 New Comment=511
+Change Component Comment : Designator=R39 Old Comment=1206 New Comment=511
+Change Component Library : Designator=P1 Old Library=Miscellaneous Connectors.IntLib New Library=PowerDistLib.SchLib
+Added Component: Designator=P5(4Pin Molex)
+Add component. Clean all parameters for all variants
+Added Pin To Net: NetName=NetD18_2 Pin=P5-1
+Added Pin To Net: NetName=NetC20_2 Pin=P5-2
+Added Pin To Net: NetName=NetC19_2 Pin=P5-3
+Added Pin To Net: NetName=NetD24_2 Pin=P5-4
