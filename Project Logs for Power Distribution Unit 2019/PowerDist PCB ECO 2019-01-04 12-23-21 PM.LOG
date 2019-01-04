@@ -1,0 +1,4 @@
+Removed Pin From Net: NetName=CANH Pin=P4-10
+Removed Pin From Net: NetName=CANL Pin=P4-20
+Added Pin To Net: NetName=CANL Pin=P4-10
+Added Pin To Net: NetName=CANH Pin=P4-20
