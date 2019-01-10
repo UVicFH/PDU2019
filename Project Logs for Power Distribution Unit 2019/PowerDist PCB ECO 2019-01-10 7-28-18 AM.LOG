@@ -1,0 +1,72 @@
+Added Component: Designator=U4(SOP65P780X200-28N)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Case/Package"; Value = "SSOP"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "Manufacturer Link"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "http://www.ftdichip.com/Products/ICs/FT232R.htm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink2Description"; Value = "Datasheet"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink2URL"; Value = "http://www.ftdichip.com/Support/Documents/DataSheets/ICs/DS_FT232R.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink3Description"; Value = "https://datasheet.ciiva.com/34304/2161019-34304054.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink3URL"; Value = "https://datasheet.ciiva.com/34304/2161019-34304054.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink4Description"; Value = "https://datasheet.ciiva.com/1787/ds-ft232r-1787047.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink4URL"; Value = "https://datasheet.ciiva.com/1787/ds-ft232r-1787047.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink5Description"; Value = "https://datasheet.ciiva.com/1787/ds-ft232r-1787048.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink5URL"; Value = "https://datasheet.ciiva.com/1787/ds-ft232r-1787048.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink6Description"; Value = "https://datasheet.ciiva.com/1787/ds-ft232r-1787049.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink6URL"; Value = "https://datasheet.ciiva.com/1787/ds-ft232r-1787049.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink7Description"; Value = "https://datasheet.ciiva.com/4787/ds-ft232r-11534-4787658.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink7URL"; Value = "https://datasheet.ciiva.com/4787/ds-ft232r-11534-4787658.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink8Description"; Value = "https://datasheet.ciiva.com/15150/getdatasheetpartid-643207-15150506.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink8URL"; Value = "https://datasheet.ciiva.com/15150/getdatasheetpartid-643207-15150506.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink9Description"; Value = "https://datasheet.ciiva.com/16200/ds-ft232r-16200652.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink9URL"; Value = "https://datasheet.ciiva.com/16200/ds-ft232r-16200652.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink10Description"; Value = "https://datasheet.ciiva.com/26841/ft232rl-reel-26841080.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink10URL"; Value = "https://datasheet.ciiva.com/26841/ft232rl-reel-26841080.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Data Rate"; Value = "12Mbps"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "DatasheetVersion"; Value = "ver 2.07, Jul-2010"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Height"; Value = "1.75mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Interface"; Value = "RS-232,RS-422,RS-485,UART"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Lead Free"; Value = "Lead Free"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Length"; Value = "10.2mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "FTDI"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer Part Number"; Value = "FT232RL-REEL"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Max Operating Temperature"; Value = "85°C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Max Supply Voltage"; Value = "5.25V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Min Operating Temperature"; Value = "-40°C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Min Supply Voltage"; Value = "3.3V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mount"; Value = "Surface Mount"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Number of Channels"; Value = "1"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Number of Pins"; Value = "28"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Number of Transceivers"; Value = "1"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Operating Supply Current"; Value = "15mA"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageDescription"; Value = "28-Pin Small Outline Package 0.65 mm Pitch"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package Quantity"; Value = "2000"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageReference"; Value = "SSOP-28"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageVersion"; Value = "2010"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Packaging"; Value = "Tape and Reel"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Pricing 1"; Value = "1=4.5, 10=4.05, 100=3.65, 250=3.25, 500=2.85002, 1000=2.65 (USD)"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Published"; Value = "19-Aug-2010"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Altium Limited"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Radiation Hardening"; Value = "No"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "REACH SVHC"; Value = "No SVHC"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Stock 1"; Value = "216496"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier 1"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier 2"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Part Number"; Value = "768-1007-1-ND"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage"; Value = "5V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Weight"; Value = "0.080001oz"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Width"; Value = "5.3mm"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=RXD Pin=U4-1
+Added Pin To Net: NetName=NetC8_1 Pin=U4-2
+Added Pin To Net: NetName=+5V Pin=U4-4
+Added Pin To Net: NetName=TXD Pin=U4-5
+Added Pin To Net: NetName=GND Pin=U4-7
+Added Pin To Net: NetName=USBD+ Pin=U4-15
+Added Pin To Net: NetName=USBD- Pin=U4-16
+Added Pin To Net: NetName=+3.3V Pin=U4-17
+Added Pin To Net: NetName=GND Pin=U4-18
+Added Pin To Net: NetName=+5V Pin=U4-20
+Added Pin To Net: NetName=GND Pin=U4-21
+Added Pin To Net: NetName=NetR12_1 Pin=U4-22
+Added Pin To Net: NetName=NetR11_1 Pin=U4-23
+Added Pin To Net: NetName=GND Pin=U4-25
+Added Pin To Net: NetName=GND Pin=U4-26

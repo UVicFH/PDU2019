@@ -1,9 +1,29 @@
-Output: Bill of Materials
-Type  : BOM
-From  : Variant [[No Variations]] of Project [Power Distribution Unit 2019.PrjPCB]
+Output: Gerber Files
+Type  : Gerber
+From  : Variant [[No Variations]] of PCB Document [PowerDist.PcbDoc]
+   Generated File[PowerDist.GTO]
+   Generated File[PowerDist.GTP]
+   Generated File[PowerDist.GTS]
+   Generated File[PowerDist.GTL]
+   Generated File[PowerDist.GBL]
+   Generated File[PowerDist.GBS]
+   Generated File[PowerDist.GBP]
+   Generated File[PowerDist.GBO]
+   Generated File[PowerDist.GM1]
+   Generated File[PowerDist.GM3]
+   Generated File[PowerDist.GM13]
+   Generated File[PowerDist.GM15]
+   Generated File[PowerDist.GM16]
+   Generated File[PowerDist.GM20]
+   Generated File[PowerDist.GKO]
+   Generated File[PowerDist.GPT]
+   Generated File[PowerDist.GPB]
+   Generated File[PowerDist.RUL]
+   Generated File[PowerDist.EXTREP]
+   Generated File[PowerDist.REP]
 
 
-Files Generated   : 0
+Files Generated   : 20
 Documents Printed : 0
 
-Finished Output Generation At 7:39:43 PM On 2018-12-13
+Finished Output Generation At 7:37:57 AM On 2019-01-10
