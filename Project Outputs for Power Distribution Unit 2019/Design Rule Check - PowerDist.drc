@@ -1,7 +1,7 @@
 Protel Design System Design Rule Check
-PCB File : C:\Users\TannerOleksiuk\Documents\GitHub\PDU2019\PowerDist.PcbDoc
-Date     : 2019-01-09
-Time     : 4:13:20 PM
+PCB File : C:\Users\uvichybrid\Documents\GitHub\PDU2019\PowerDist.PcbDoc
+Date     : 1/9/2019
+Time     : 5:13:54 PM
 
 Processing Rule : Clearance Constraint (Gap=0.203mm) (All),(All)
 Rule Violations :0
@@ -36,12 +36,9 @@ Processing Rule : Minimum Solder Mask Sliver (Gap=0.254mm) (All),(All)
    Violation between Minimum Solder Mask Sliver Constraint: (0.047mm < 0.254mm) Between Pad J1-2(114.052mm,111.76mm) on Top Layer And Pad J1-3(113.402mm,111.76mm) on Top Layer [Top Solder] Mask Sliver [0.047mm]
    Violation between Minimum Solder Mask Sliver Constraint: (0.047mm < 0.254mm) Between Pad J1-3(113.402mm,111.76mm) on Top Layer And Pad J1-4(112.752mm,111.76mm) on Top Layer [Top Solder] Mask Sliver [0.047mm]
    Violation between Minimum Solder Mask Sliver Constraint: (0.047mm < 0.254mm) Between Pad J1-4(112.752mm,111.76mm) on Top Layer And Pad J1-5(112.102mm,111.76mm) on Top Layer [Top Solder] Mask Sliver [0.047mm]
-   Violation between Minimum Solder Mask Sliver Constraint: (0.238mm < 0.254mm) Between Pad Q10-2(77.288mm,88.105mm) on Top Layer And Via (76.302mm,87.325mm) from Top Layer to Bottom Layer [Top Solder] Mask Sliver [0.238mm]
    Violation between Minimum Solder Mask Sliver Constraint: (0.248mm < 0.254mm) Between Pad R1-1(74.651mm,107.753mm) on Top Layer And Pad U3-8(72.537mm,106.713mm) on Top Layer [Top Solder] Mask Sliver [0.248mm]
-   Violation between Minimum Solder Mask Sliver Constraint: (0.08mm < 0.254mm) Between Pad R20-1(124.713mm,68.653mm) on Top Layer And Via (125.681mm,69.825mm) from Top Layer to Bottom Layer [Top Solder] Mask Sliver [0.08mm]
    Violation between Minimum Solder Mask Sliver Constraint: (0.156mm < 0.254mm) Between Pad R25-1(125.681mm,100.363mm) on Bottom Layer And Pad R33-2(125.681mm,98.204mm) on Bottom Layer [Bottom Solder] Mask Sliver [0.156mm]
    Violation between Minimum Solder Mask Sliver Constraint: (0.156mm < 0.254mm) Between Pad R25-2(122.681mm,100.363mm) on Bottom Layer And Pad R33-1(122.681mm,98.204mm) on Bottom Layer [Bottom Solder] Mask Sliver [0.156mm]
-   Violation between Minimum Solder Mask Sliver Constraint: (0.089mm < 0.254mm) Between Pad R28-1(58.498mm,86.139mm) on Bottom Layer And Via (57.48mm,85.801mm) from Top Layer to Bottom Layer [Bottom Solder] Mask Sliver [0.089mm]
    Violation between Minimum Solder Mask Sliver Constraint: (0.097mm < 0.254mm) Between Pad U1-1(94.023mm,96.686mm) on Top Layer And Pad U1-2(94.023mm,95.886mm) on Top Layer [Top Solder] Mask Sliver [0.097mm]
    Violation between Minimum Solder Mask Sliver Constraint: (0.097mm < 0.254mm) Between Pad U1-10(96.273mm,89.636mm) on Top Layer And Pad U1-11(97.073mm,89.636mm) on Top Layer [Top Solder] Mask Sliver [0.097mm]
    Violation between Minimum Solder Mask Sliver Constraint: (0.097mm < 0.254mm) Between Pad U1-10(96.273mm,89.636mm) on Top Layer And Pad U1-9(95.473mm,89.636mm) on Top Layer [Top Solder] Mask Sliver [0.097mm]
@@ -96,7 +93,7 @@ Processing Rule : Minimum Solder Mask Sliver (Gap=0.254mm) (All),(All)
    Violation between Minimum Solder Mask Sliver Constraint: (0.047mm < 0.254mm) Between Pad U4-6(101.823mm,106.246mm) on Top Layer And Pad U4-7(101.823mm,106.896mm) on Top Layer [Top Solder] Mask Sliver [0.047mm]
    Violation between Minimum Solder Mask Sliver Constraint: (0.047mm < 0.254mm) Between Pad U4-7(101.823mm,106.896mm) on Top Layer And Pad U4-8(101.823mm,107.546mm) on Top Layer [Top Solder] Mask Sliver [0.047mm]
    Violation between Minimum Solder Mask Sliver Constraint: (0.047mm < 0.254mm) Between Pad U4-8(101.823mm,107.546mm) on Top Layer And Pad U4-9(101.823mm,108.196mm) on Top Layer [Top Solder] Mask Sliver [0.047mm]
-Rule Violations :68
+Rule Violations :65
 
 Processing Rule : Silk To Solder Mask (Clearance=0.05mm) (IsPad),(All)
    Violation between Silk To Solder Mask Clearance Constraint: (Collision < 0.05mm) Between Pad D12-1(71.222mm,82.149mm) on Bottom Layer And Text "*" (71.857mm,83.403mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0mm]
@@ -107,10 +104,9 @@ Processing Rule : Silk To Solder Mask (Clearance=0.05mm) (IsPad),(All)
    Violation between Silk To Solder Mask Clearance Constraint: (Collision < 0.05mm) Between Pad Q11-3(102.017mm,82.961mm) on Bottom Layer And Text "FP" (103.033mm,83.492mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0mm]
    Violation between Silk To Solder Mask Clearance Constraint: (Collision < 0.05mm) Between Pad Q1-3(57.764mm,96.154mm) on Bottom Layer And Text "Q3" (59.868mm,96.037mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0mm]
    Violation between Silk To Solder Mask Clearance Constraint: (Collision < 0.05mm) Between Pad Q4-1(124.887mm,68.351mm) on Bottom Layer And Text "R16" (123.633mm,68.272mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0mm]
-   Violation between Silk To Solder Mask Clearance Constraint: (0.047mm < 0.05mm) Between Pad Q6-1(51.167mm,81.919mm) on Bottom Overlay And Polygon Region (436 hole(s)) Bottom Layer [Bottom Overlay] to [Bottom Solder] clearance [0.047mm]
    Violation between Silk To Solder Mask Clearance Constraint: (Collision < 0.05mm) Between Pad R13-2(59.638mm,97.003mm) on Bottom Layer And Text "Q3" (59.868mm,96.037mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0mm]
    Violation between Silk To Solder Mask Clearance Constraint: (Collision < 0.05mm) Between Pad R14-2(119.204mm,64.77mm) on Top Layer And Track (119.812mm,61.798mm)(119.812mm,73.439mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0mm]
-Rule Violations :11
+Rule Violations :10
 
 Processing Rule : Silk to Silk (Clearance=0.05mm) (All),(All)
    Violation between Silk To Silk Clearance Constraint: (Collision < 0.05mm) Between Arc (102.217mm,81.661mm) on Bottom Overlay And Text "FP" (103.033mm,83.492mm) on Bottom Overlay Silk Text to Silk Clearance [0mm]
@@ -151,6 +147,6 @@ Processing Rule : Height Constraint (Min=0mm) (Max=50mm) (Prefered=12.7mm) (All)
 Rule Violations :0
 
 
-Violations Detected : 108
+Violations Detected : 104
 Waived Violations : 0
-Time Elapsed        : 00:00:01
+Time Elapsed        : 00:00:02
