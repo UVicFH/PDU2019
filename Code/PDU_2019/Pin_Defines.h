@@ -1,42 +1,37 @@
 #define SPI_CS_PIN 9
 #define ENGINE_FAN_PIN 6
-#define CAN_REAR_POWER_DIST_MSG_ADDRESS 0x50
+#define PDU_IN_ID 0x80
+#define PDU_OUT_ID 0x81
 
 #define BRAKE_LIGHT_BYTE 0
 #define BRAKE_LIGHT_BIT 0
-#define BRAKE_LIGHT_PIN 0
+#define BRAKE_LIGHT_PIN 7
 
 #define FUEL_PUMP_BYTE 0
 #define FUEL_PUMP_BIT 1
 #define FUEL_PUMP_PIN 5
 
-#define MS_BYTE 0
-#define MS_BIT 2
-#define MS_PIN 7
-
-#define BRAKE_SOL_BYTE 0
-#define BRAKE_SOL_BIT 4
-#define BRAKE_SOL_PIN A3
-
 #define STARTER_BYTE 0
 #define STARTER_BIT 5
-#define STARTER_PIN A4
+#define STARTER_PIN 8
 
 #define SHIFT_UP_BYTE 0
 #define SHIFT_UP_BIT 6
-#define SHIFT_UP_PIN A5
+#define SHIFT_UP_PIN 4
 
 #define SHIFT_DN_BYTE 0
 #define SHIFT_DN_BIT 7
-#define SHIFT_DN_PIN 1
-
-#define SPARE_CPBRB_BYTE 1
-#define SPARE_CPBRB_BIT 1
-#define SPARE_CPBRB_PIN A1
+#define SHIFT_DN_PIN 3
 
 #define FAN_BYTE 2
 #define FAN_BIT 0
+#define FAN_LEN 8 //8 bits for fan pwm
 #define FAN_PIN 6
+
+// not currently used
+#define SPARE_RBRB_BYTE 1
+#define SPARE_RBRB_BIT 2
+#define SPARE_RBRB_PIN 10
 
 #define MASK_1 0x1
 #define BIT_2_MASK 0x2
