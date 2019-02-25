@@ -1,6 +1,5 @@
 #define SPI_CS_PIN 9
-#define ENGINE_FAN_PIN 6
-#define PDU_IN_ID 0x80
+#define PDU_IN_ID 0x50
 #define PDU_OUT_ID 0x81
 
 #define BRAKE_LIGHT_BYTE 0

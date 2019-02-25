@@ -2,7 +2,7 @@
 #include <SPI.h>
 
 const int SPI_CS_PIN = 9;
-const int ID = 0x80;
+const int ID = 0x50;
 
 MCP_CAN CAN(SPI_CS_PIN);
 
@@ -24,7 +24,6 @@ void two_second_send(byte * data){
   
   for(int i = 0; i < 20; i++){
     CAN.sendMsgBuf(ID, 0, 3, data);
-    // Serial.println("Message Sent");
     delay(100);
   }
   
@@ -58,9 +57,10 @@ void loop()
   Serial.println("Brake Light!");
   two_second_send(message);
 //  
-//  // Turn everything off
-//  message[0] = 0b0;
-//  two_second_send(message);
+  // Turn everything off
+  message[0] = 0b0;
+    Serial.println("off");
+  two_second_send(message);
 //
   // Ramp up the engine fan and bring it back down again in two seconds
 //  Serial.println("Fan Up!");
