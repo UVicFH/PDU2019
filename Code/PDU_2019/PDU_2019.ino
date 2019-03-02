@@ -78,7 +78,7 @@ void loop(){
   // If there is a message available in the buffer
   while (CAN_MSGAVAIL == CAN.checkReceive())
   {
-     Serial.println("message available");
+     //Serial.println("message available");
     // Create a buffer and insert the three byte message into it
     byte buf[8];
     byte len = 0;
