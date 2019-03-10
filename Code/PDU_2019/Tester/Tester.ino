@@ -50,15 +50,34 @@ void loop()
   two_second_send(message);
 
   message[0] >>= 4;
+  message[1] = 0b00000000;
   Serial.println("Fuel Pump!");
   two_second_send(message);
 
   message[0] >>= 1;
   Serial.println("Brake Light!");
   two_second_send(message);
+
+  //set byte 0 to 0
+  message[0] = 0b0;
+  
+  message[1] = 0b00000100;
+  Serial.println("Spare!");
+  two_second_send(message);
+
+
+  //set byte 1 to 0
+   message[1] = 0b0;
+
+  message[2] = 0b00000001;
+  Serial.println("Fan Test!");
+  two_second_send(message);
+
 //  
   // Turn everything off
   message[0] = 0b0;
+  message[1] = 0b0;
+  message[2] = 0b0;
     Serial.println("off");
   two_second_send(message);
 //

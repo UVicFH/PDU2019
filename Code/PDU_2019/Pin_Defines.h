@@ -2,6 +2,9 @@
 #define PDU_IN_ID 0x50
 #define PDU_OUT_ID 0x81
 
+#define AMS_STATUS_PIN A6
+#define IMD_STATUS_PIN A7
+ 
 #define BRAKE_LIGHT_BYTE 0
 #define BRAKE_LIGHT_BIT 0
 #define BRAKE_LIGHT_PIN 7
@@ -26,6 +29,9 @@
 #define FAN_BIT 0
 #define FAN_LEN 8 //8 bits for fan pwm
 #define FAN_PIN 6
+
+#define COCKPIT_BRB_STATUS_BYTE 1
+#define COCKPIT_BRB_STATUS_BIT 3
 
 // not currently used
 #define SPARE_RBRB_BYTE 1
