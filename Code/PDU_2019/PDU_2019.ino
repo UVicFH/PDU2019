@@ -19,7 +19,7 @@ void set_outputs(byte len, byte* buf)
 
   //Checks both fuel pump status and CBRB status to make sure fuel pump shuts off when CBRB is off
   if((buf[FUEL_PUMP_BYTE]>>FUEL_PUMP_BIT&MASK_1)&&(buf[COCKPIT_BRB_STATUS_BYTE]>>COCKPIT_BRB_STATUS_BIT&MASK_1)) Serial.println("Fuel Pump Activated!");
-  digitalWrite(FUEL_PUMP_PIN, buf[FUEL_PUMP_BYTE]>>FUEL_PUMP_BIT&MASK_1);
+  digitalWrite(FUEL_PUMP_PIN, ((buf[FUEL_PUMP_BYTE]>>FUEL_PUMP_BIT&MASK_1)&&(buf[COCKPIT_BRB_STATUS_BYTE]>>COCKPIT_BRB_STATUS_BIT&MASK_1)));
 
   if(buf[STARTER_BYTE]>>STARTER_BIT&MASK_1) Serial.println("Starter Activated!");
   digitalWrite(STARTER_PIN, buf[STARTER_BYTE]>>STARTER_BIT&MASK_1);
