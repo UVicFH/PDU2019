@@ -36,9 +36,11 @@ void set_outputs(byte len, byte* buf)
 
 
 //Non PWM Fan activation for testing purposes
-  if(buf[FAN_BYTE]>0) {
+  if(buf[FAN_BYTE]>30) {
     Serial.println("Fan Activated!");
     digitalWrite(FAN_PIN, 1);
+  } else if (buf[FAN_BYTE] < 1)  {
+    digitalWrite(FAN_PIN, 0);
   }
 
 //  // Set the engine fan with PWM
