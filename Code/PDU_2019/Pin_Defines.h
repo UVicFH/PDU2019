@@ -1,6 +1,6 @@
 #define SPI_CS_PIN 9
-#define PDU_IN_ID 0x80
-#define PDU_OUT_ID 0x81
+#define PDU_IN_ID 80
+#define PDU_OUT_ID 81
 
 #define AMS_STATUS_PIN A6
 #define IMD_STATUS_PIN A7

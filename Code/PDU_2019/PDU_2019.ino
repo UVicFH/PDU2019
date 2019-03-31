@@ -34,20 +34,22 @@ void set_outputs(byte len, byte* buf)
 //  if(buf[SPARE_RBRB_BYTE]>>SPARE_RBRB_BIT&MASK_1) Serial.println("Spare RBRB Activated!");
 //  digitalWrite(SPARE_RBRB_PIN, buf[SPARE_RBRB_BYTE]>>SPARE_RBRB_BIT&MASK_1);
 
-/*
+
 //Non PWM Fan activation for testing purposes
-  if(buf[FAN_BYTE]>>FAN_BIT&MASK_1) Serial.println("Fan Activated!");
-  digitalWrite(FAN_PIN, buf[FAN_BYTE]>>FAN_BIT&MASK_1);
-*/
-  // Set the engine fan
-  //if(buf[2] > 0) {
-   // Serial.println("Fan Activated");
-    //Serial.println(buf[2]);
-    //int fan_pwm = 0.70*buf[2]; // reduce given value to 80 percent
-    //analogWrite(FAN_PIN, fan_pwm);
-  //} else {
-   // digitalWrite(FAN_PIN, 0); //For pin 6, analog write may fully turn off fan
-  //}
+  if(buf[FAN_BYTE]>0) {
+    Serial.println("Fan Activated!");
+    digitalWrite(FAN_PIN, 1);
+  }
+
+//  // Set the engine fan with PWM
+//  if(buf[FAN_BYTE]>0) {
+//    Serial.println("Fan Activated");
+//    Serial.println(buf[2]);
+//    int fan_pwm = buf[FAN_BYTE]; // reduce given value to 80 percent
+//    analogWrite(FAN_PIN, fan_pwm);
+//  } else {
+//    digitalWrite(FAN_PIN, 0); //For pin 6, analog write may fully turn off fan
+//  }
   
 }
 
