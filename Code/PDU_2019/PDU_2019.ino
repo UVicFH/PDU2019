@@ -36,22 +36,22 @@ void set_outputs(byte len, byte* buf)
 
 
 //Non PWM Fan activation for testing purposes
-  if(buf[FAN_BYTE]>30) {
-    Serial.println("Fan Activated!");
-    digitalWrite(FAN_PIN, 1);
-  } else if (buf[FAN_BYTE] < 1)  {
-    digitalWrite(FAN_PIN, 0);
-  }
-
-//  // Set the engine fan with PWM
-//  if(buf[FAN_BYTE]>0) {
-//    Serial.println("Fan Activated");
-//    Serial.println(buf[2]);
-//    int fan_pwm = buf[FAN_BYTE]; // reduce given value to 80 percent
-//    analogWrite(FAN_PIN, fan_pwm);
-//  } else {
-//    digitalWrite(FAN_PIN, 0); //For pin 6, analog write may fully turn off fan
+//  if(buf[FAN_BYTE]>30) {
+//    Serial.println("Fan Activated!");
+//    digitalWrite(FAN_PIN, 1);
+//  } else if (buf[FAN_BYTE] < 1)  {
+//    digitalWrite(FAN_PIN, 0);
 //  }
+
+  // Set the engine fan with PWM
+  if(buf[FAN_BYTE]>0) {
+    Serial.println("Fan Activated");
+    Serial.println(buf[2]);
+    int fan_pwm = 0.7*buf[FAN_BYTE]; // reduce given value to 70 percent
+    analogWrite(FAN_PIN, fan_pwm);
+  } else {
+    digitalWrite(FAN_PIN, 0); //For pin 6, analog write may fully turn off fan
+  }
   
 }
 
@@ -94,10 +94,20 @@ void createMessage(int AMS, int IMD, unsigned char (&message)[8]){
 
 void setup(){
 
-  // Uncomment below line if you are debugging and need to see what is being received. Note this may keep the downshift and brake light on beacuse they're on the TX/RX pins respectively
+  // Uncomment below line if you are debugging and need to see what is being received.
   Serial.begin(9600);
   SPI.begin();
+
+  //Set PWM frequency on pins 5 and 6 to 7812.5Hz
   
+  TCCR0B = (TCCR0B&0xF8) | 0x02;
+  //Change 2 to following values to adjust frequency:
+  //0x01 ->  62500 Hz 
+  //0x02 ->  7812.5 Hz
+  //0x03 ->  976.56 Hz (default)
+  //0x04 ->  244.14 Hz
+  //0x05 ->  61 Hz
+
   // Create an infinite loop to prevent the program from starting before CAN is established
   for(;;)
   {
