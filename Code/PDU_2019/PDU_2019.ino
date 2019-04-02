@@ -1,3 +1,5 @@
+#include "PWM.h"
+
 #include "mcp_can.h"
 
 #include "Pin_Defines.h"
@@ -47,8 +49,8 @@ void set_outputs(byte len, byte* buf)
   if(buf[FAN_BYTE]>0) {
     Serial.println("Fan Activated");
     Serial.println(buf[2]);
-    int fan_pwm = 0.7*buf[FAN_BYTE]; // reduce given value to 70 percent
-    analogWrite(FAN_PIN, fan_pwm);
+    int fan_pwm = buf[FAN_BYTE]; //Set PWM
+    pwmWrite(FAN_PIN, fan_pwm); //same as analogWrite but works with PWM library
   } else {
     digitalWrite(FAN_PIN, 0); //For pin 6, analog write may fully turn off fan
   }
@@ -98,9 +100,24 @@ void setup(){
   Serial.begin(9600);
   SPI.begin();
 
-  //Set PWM frequency on pins 5 and 6 to 7812.5Hz
+  //Set PWM frequency on pin 6 to 20kHz
+  int32_t PWMFrequency = 20000;
+  //initialize all timers
+  InitTimers();
+
+  bool success = SetPinFrequency(FAN_PIN, PWMFrequency);
+
+  //For debugging to check if frequency was initialized properly
+  if(success){
+    Serial.print("Successfully initialized PWM frequency to: ");
+    Serial.println(PWMFrequency);
+    }
+    else{
+      Serial.println("Failed initialization of PWM frequency");
+      }
   
-  TCCR0B = (TCCR0B&0xF8) | 0x02;
+  //***OLD PWM FREQUENCY CODE***
+  //TCCR0B = (TCCR0B&0xF8) | 0x02;
   //Change 2 to following values to adjust frequency:
   //0x01 ->  62500 Hz 
   //0x02 ->  7812.5 Hz
