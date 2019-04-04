@@ -44,12 +44,12 @@ void set_outputs(byte len, byte* buf)
 //  }
 
   // Set the engine fan with PWM
-  if(buf[FAN_BYTE]>0) {
+  if(buf[FAN_BYTE]>30) {
     Serial.println("Fan Activated");
     Serial.println(buf[2]);
     int fan_pwm = buf[FAN_BYTE]; //Set PWM
-    analogWrite(FAN_PIN, fan_pwm); //same as analogWrite but works with PWM library
-  } else {
+    analogWrite(FAN_PIN, fan_pwm); 
+  } else if (buf[FAN_BYTE]<=0){
     digitalWrite(FAN_PIN, 0); //For pin 6, analog write may fully turn off fan
   }
   
@@ -99,7 +99,6 @@ void setup(){
   SPI.begin();
 
   
-  //***OLD PWM FREQUENCY CODE***
   TCCR0A = _BV(COM0A1) | _BV(COM0B1) | _BV(WGM00);
   TCCR0B = _BV(CS00);
 
