@@ -7,8 +7,11 @@ MCP_CAN CAN(SPI_CS_PIN);
 int AMS_STATUS = 0;
 int IMD_STATUS = 0;
 
+unsigned long canLastSent = 0;
+int canOutputDelay = 500;
+
 //Unsigned char acts as byte for message sending
-unsigned char CANOut[8] = {0,0,0,0,0,0,0,0};
+unsigned char CANOut[1] = {0};
 
 void set_outputs(byte len, byte* buf)
 {
@@ -71,26 +74,6 @@ int getAMSStatus(){
   return 0;
 }
 
-//Creates message to send based on AMS/IMD status
-void createMessage(int AMS, int IMD, unsigned char (&message)[8]){
-  //set AMS IMD Flag bytes based on their current status
-    if(AMS&&IMD){
-      message[6] = 1;
-      message[7] = 1;
-    }
-    else if(AMS){
-      message[6] = 1;
-      message[7] = 0;
-    }
-    else if(IMD){
-      message[7] = 1;
-      message [6] = 0; 
-    }
-    else{
-      message[6] = 0;
-      message[7] = 0;
-    }
-  }
 
 void setup(){
 
@@ -126,16 +109,16 @@ void setup(){
   }
 
   // Set both masks to check all digits (compare the entire ID to the filter) of the arbitration IDs
-  CAN.init_Mask(0, 0, 0xFFF);
-  CAN.init_Mask(1, 0, 0xFFF);
+  CAN.init_Mask(0, 0, 0x7FF);
+  CAN.init_Mask(1, 0, 0x7FF);
 
   // Set all filters to only accept the desired arbitration ID
-  CAN.init_Filt(1, 0, PDU_IN_ID);
-  CAN.init_Filt(2, 0, PDU_IN_ID);
-  CAN.init_Filt(3, 0, PDU_IN_ID);
-  CAN.init_Filt(4, 0, PDU_IN_ID);
-  CAN.init_Filt(5, 0, PDU_IN_ID);
-  CAN.init_Filt(0, 0, PDU_IN_ID);
+  CAN.init_Filt(0, 0, pdu_output);
+  CAN.init_Filt(1, 0, pdu_output);
+  CAN.init_Filt(2, 0, pdu_output);
+  CAN.init_Filt(3, 0, pdu_output);
+  CAN.init_Filt(4, 0, pdu_output);
+  CAN.init_Filt(5, 0, pdu_output);
   Serial.println("setup done");
 
   //*******SPARE ALWAYS SET TO ON, TO CHANGE DELETE LINE BELOW (SEE LINE 33 ASWELL)*******
@@ -148,21 +131,31 @@ void setup(){
 
 void loop(){
 
+
   //check AMS/IMD status and set message
   AMS_STATUS = getAMSStatus();
   IMD_STATUS = getIMDStatus();
   
-  //set message
-  createMessage(AMS_STATUS, IMD_STATUS, CANOut);
-  //send out AMS/IMD status as 8 bit CANOut char array
-  CAN.sendMsgBuf(PDU_OUT_ID, 0, 8, CANOut);
+ 
+  //send out AMS/IMD status
+  // send messag
+  if(millis()-canLastSent >= canOutputDelay)
+  {
+    //set message
+    CANOut[0] = ((AMS_STATUS << 1) & 0b10) | IMD_STATUS;
+    CAN.sendMsgBuf(pdu_input, 0, 1, CANOut);
+
+    // Update the last send time
+    canLastSent = millis();
+  }
+  
   
   // If there is a message available in the buffer
   if (CAN_MSGAVAIL == CAN.checkReceive())
   {
      Serial.println("message available");
     // Create a buffer and insert the three byte message into it
-    byte buf[8];
+    byte buf[2];
     byte len = 0;
     CAN.readMsgBuf(&len, buf);
 
