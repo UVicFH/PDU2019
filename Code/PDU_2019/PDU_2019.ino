@@ -17,20 +17,20 @@ void set_outputs(byte len, byte* buf)
 {
   
   // Set each digital
-  if(buf[BRAKE_LIGHT_BYTE]>>BRAKE_LIGHT_BIT&MASK_1) Serial.println("Brake Activated!");
+  //if(buf[BRAKE_LIGHT_BYTE]>>BRAKE_LIGHT_BIT&MASK_1) Serial.println("Brake Activated!");
   digitalWrite(BRAKE_LIGHT_PIN, buf[BRAKE_LIGHT_BYTE]>>BRAKE_LIGHT_BIT&MASK_1);
 
   //Checks both fuel pump status and CBRB status to make sure fuel pump shuts off when CBRB is off
-  if((buf[FUEL_PUMP_BYTE]>>FUEL_PUMP_BIT&MASK_1)&&(buf[COCKPIT_BRB_STATUS_BYTE]>>COCKPIT_BRB_STATUS_BIT&MASK_1)) Serial.println("Fuel Pump Activated!");
+  //if((buf[FUEL_PUMP_BYTE]>>FUEL_PUMP_BIT&MASK_1)&&(buf[COCKPIT_BRB_STATUS_BYTE]>>COCKPIT_BRB_STATUS_BIT&MASK_1)) Serial.println("Fuel Pump Activated!");
   digitalWrite(FUEL_PUMP_PIN, ((buf[FUEL_PUMP_BYTE]>>FUEL_PUMP_BIT&MASK_1)&&(buf[COCKPIT_BRB_STATUS_BYTE]>>COCKPIT_BRB_STATUS_BIT&MASK_1)));
 
-  if(buf[STARTER_BYTE]>>STARTER_BIT&MASK_1) Serial.println("Starter Activated!");
+  //if(buf[STARTER_BYTE]>>STARTER_BIT&MASK_1) Serial.println("Starter Activated!");
   digitalWrite(STARTER_PIN, buf[STARTER_BYTE]>>STARTER_BIT&MASK_1);
 
-  if(buf[SHIFT_UP_BYTE]>>SHIFT_UP_BIT&MASK_1) Serial.println("Upshift Activated!");
+  //if(buf[SHIFT_UP_BYTE]>>SHIFT_UP_BIT&MASK_1) Serial.println("Upshift Activated!");
   digitalWrite(SHIFT_UP_PIN, buf[SHIFT_UP_BYTE]>>SHIFT_UP_BIT&MASK_1);
 
-  if(buf[SHIFT_DN_BYTE]>>SHIFT_DN_BIT&MASK_1) Serial.println("Downshift Activated!");
+  //if(buf[SHIFT_DN_BYTE]>>SHIFT_DN_BIT&MASK_1) Serial.println("Downshift Activated!");
   digitalWrite(SHIFT_DN_PIN, buf[SHIFT_DN_BYTE]>>SHIFT_DN_BIT&MASK_1);
 
 //*******SPARE SET TO ALWAYS BE ON, TO CHANGE UNCOMMENT LINES BELOW (SEE LINE 88 ASWELL)*******
@@ -48,30 +48,14 @@ void set_outputs(byte len, byte* buf)
 
   // Set the engine fan with PWM
   if(buf[FAN_BYTE]>30) {
-    Serial.println("Fan Activated");
-    Serial.println(buf[2]);
+//    Serial.println("Fan Activated");
+//    Serial.println(buf[FAN_BYTE]);
     int fan_pwm = buf[FAN_BYTE]; //Set PWM
     analogWrite(FAN_PIN, fan_pwm); 
   } else if (buf[FAN_BYTE]<=0){
     digitalWrite(FAN_PIN, 0); //For pin 6, analog write may fully turn off fan
   }
   
-}
-
-//returns IMD status
-int getIMDStatus(){
-  if(analogRead(IMD_STATUS_PIN) >= 600){
-      return 1;
-    }
-  return 0;
-}
-
-//returns AMS status
-int getAMSStatus(){
-  if(analogRead(AMS_STATUS_PIN) >= 600){
-    return 1;
-    }
-  return 0;
 }
 
 
@@ -94,32 +78,26 @@ void setup(){
   //0x05 ->  61 Hz
 
   // Create an infinite loop to prevent the program from starting before CAN is established
-  for(;;)
+  while(!CAN_OK == CAN.begin(CAN_500KBPS))
   {
-    if(CAN_OK == CAN.begin(CAN_500KBPS))
-    {
-      Serial.println("CAN BUS INIT GOOD");
-      break;
-    }
-    else
-    {
       Serial.println("CAN BUS INIT FAIL, RETRY");
       delay(100);
-    }
   }
+  
+  Serial.println("CAN BUS INIT GOOD");
 
   // Set both masks to check all digits (compare the entire ID to the filter) of the arbitration IDs
-  CAN.init_Mask(0, 0, 0x7FF);
-  CAN.init_Mask(1, 0, 0x7FF);
-
   // Set all filters to only accept the desired arbitration ID
-  CAN.init_Filt(0, 0, pdu_output);
-  CAN.init_Filt(1, 0, pdu_output);
-  CAN.init_Filt(2, 0, pdu_output);
-  CAN.init_Filt(3, 0, pdu_output);
-  CAN.init_Filt(4, 0, pdu_output);
-  CAN.init_Filt(5, 0, pdu_output);
-  Serial.println("setup done");
+  CAN.init_Mask(0, 0, 0x7FF);
+  CAN.init_Filt(1, 0, pdu_can_input);
+  CAN.init_Filt(2, 0, pdu_can_input);
+
+  CAN.init_Mask(1, 0, 0x7FF);
+  CAN.init_Filt(3, 0, pdu_can_input);
+  CAN.init_Filt(4, 0, pdu_can_input);
+  CAN.init_Filt(5, 0, pdu_can_input);
+  CAN.init_Filt(0, 0, pdu_can_input);
+//  Serial.println("setup done");
 
   //*******SPARE ALWAYS SET TO ON, TO CHANGE DELETE LINE BELOW (SEE LINE 33 ASWELL)*******
   digitalWrite(SPARE_RBRB_PIN, HIGH);
@@ -133,8 +111,8 @@ void loop(){
 
 
   //check AMS/IMD status and set message
-  AMS_STATUS = getAMSStatus();
-  IMD_STATUS = getIMDStatus();
+  AMS_STATUS = (analogRead(AMS_STATUS_PIN) >= 600);
+  IMD_STATUS = (analogRead(IMD_STATUS_PIN) >= 600);
   
  
   //send out AMS/IMD status
@@ -143,7 +121,7 @@ void loop(){
   {
     //set message
     CANOut[0] = ((AMS_STATUS << 1) & 0b10) | IMD_STATUS;
-    CAN.sendMsgBuf(pdu_input, 0, 1, CANOut);
+    CAN.sendMsgBuf(pdu_can_output, 0, 1, CANOut);
 
     // Update the last send time
     canLastSent = millis();

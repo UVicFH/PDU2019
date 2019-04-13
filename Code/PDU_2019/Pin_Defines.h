@@ -1,6 +1,6 @@
 #define SPI_CS_PIN 9
-#define pdu_output 80
-#define pdu_input 81
+#define pdu_can_input 80
+#define pdu_can_output 81
 
 #define AMS_STATUS_PIN A6
 #define IMD_STATUS_PIN A7
