@@ -171,8 +171,12 @@ void loop(){
     byte len = 0;
     CAN.readMsgBuf(&len, buf);
 
-    // Set the outputs of the board given the CAN message
-    set_outputs(len, buf);
+    // Double check the right thing made it through the filter
+    if(canId == PDU_IN_ID){
+      // Set the outputs of the board given the CAN message
+      set_outputs(len, buf);
+    }
+    
   }
   
 }
